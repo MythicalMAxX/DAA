@@ -2,6 +2,8 @@
 ### Concept:
 Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It's much like sorting a hand of playing cards.
 
+![](https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif)
+
 ### Explanation:
 Imagine you have a deck of cards, and they're all mixed up. Insertion Sort works by taking one card at a time and placing it in its correct position in the sorted part of the deck.
 
@@ -50,6 +52,8 @@ This algorithm iterates through the array, comparing and shifting elements until
 ### Concept:
 Selection Sort is another simple sorting algorithm that works by dividing the array into a sorted and an unsorted region. In each iteration, it selects the smallest (or largest, depending on the order) element from the unsorted region and swaps it with the first unsorted element.
 
+![](https://upload.wikimedia.org/wikipedia/commons/3/3e/Sorting_selection_sort_anim.gif)
+
 ### Explanation:
 Imagine you have a list of numbers, and you want to sort them in ascending order. Selection Sort works like finding the smallest number and placing it at the beginning, then finding the next smallest and placing it in the second position, and so on.
 
@@ -92,7 +96,9 @@ This algorithm iterates through the array, finding the smallest element in the u
 ## Bubble Sort
 ### Concept:
 Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
 ![](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+
 ### Explanation:
 Imagine you have a list of numbers, and you want to sort them in ascending order using Bubble Sort. The algorithm compares pairs of adjacent elements and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted.
 
@@ -128,6 +134,8 @@ This algorithm iterates through the array, comparing adjacent elements and swapp
 ## Merge Sort
 ### Concept:
 Merge Sort can be thought of as breaking a big problem into smaller subproblems, solving each subproblem individually, and then combining the solutions to get the final result.
+
+![](https://miro.medium.com/v2/format:webp/0*K7cD17vfL7FdTTLK.gif)
 
 ### Explanation:
 
@@ -207,11 +215,13 @@ This algorithm ensures that the smaller parts of the array are sorted first, and
 
 ## Heap Sort
 ### Concept:
-
 Build a max heap from the unsorted array.
 Swap the root (maximum element) with the last element and reduce the size of the heap.
 Heapify the root to maintain the max heap property.
 Repeat steps 2-3 until the heap size becomes 1.
+
+![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Heap_sort_example.gif)
+
 ### Visual Explanation:
 Consider the array [12, 11, 13, 5, 6, 7] as an example.
 
@@ -318,11 +328,13 @@ This algorithm ensures that the largest element is always at the root of the hea
 
 ## Quick Sort
 ### Concept:
-
 **Select a Pivot:** Choose an element from the array to act as a pivot.
 **Partitioning:** Rearrange the array so that elements less than the pivot are on the left, and elements greater than the pivot are on the right.
 **Recursion:** Apply Quick Sort recursively to the left and right sub-arrays.
 **Combine:** The sorted sub-arrays are combined to get the final sorted array.
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif)
+
 ### Visual Explanation:
 Consider the array [38, 27, 43, 3, 9, 82, 10] as an example.
 
