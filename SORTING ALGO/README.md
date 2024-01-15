@@ -392,3 +392,95 @@ partition(arr, low, high):
     return i + 1
 ```
 This algorithm efficiently sorts the array in-place by selecting a pivot, partitioning the array around the pivot, and recursively applying the process to the sub-arrays.
+
+
+## Radix Sort
+### Concept:
+
+**LSD Approach:** Start by sorting based on the least significant digit (rightmost) and move towards the most significant digit (leftmost).
+**Bucket Sorting:** Distribute elements into buckets according to the current digit being considered.
+**Combine Buckets:** Combine the buckets to get a partially sorted array.
+**Repeat:** Repeat the process for each digit until the entire array is sorted.
+
+![](https://d18l82el6cdm1i.cloudfront.net/uploads/hrUDdYC7OH-countingsort.gif)
+
+### Visual Explanation:
+**Consider an array of integers:** [170, 45, 75, 90, 802, 24, 2, 66]. We'll sort this array using Radix Sort with LSD approach.
+
+### LSD - First Pass (Rightmost Digit):
+
+```
+Bucket 0: [170, 90, 802]
+Bucket 2: [2]
+Bucket 4: [24]
+Bucket 5: [45]
+Bucket 6: [66]
+Bucket 7: [75]
+Combine the buckets: [170, 90, 802, 2, 24, 45, 66, 75]
+```
+### LSD - Second Pass (Next Digit to the Left):
+
+```
+Bucket 0: [802, 2]
+Bucket 1: [170]
+Bucket 2: [24]
+Bucket 4: [45]
+Bucket 5: [66]
+Bucket 7: [75, 90]
+Combine the buckets: [802, 2, 170, 24, 45, 66, 75, 90]
+```
+### LSD - Third Pass (Next Digit to the Left):
+
+```
+Bucket 0: [2, 24]
+Bucket 4: [45]
+Bucket 5: [66]
+Bucket 7: [75]
+Bucket 8: [802, 170, 90]
+Combine the buckets: [2, 24, 45, 66, 75, 802, 170, 90]
+```
+Now, the array is sorted.
+
+### Real-life analogy:
+Think of Radix Sort like organizing a set of books on a bookshelf. You start by sorting based on the rightmost digit of the page numbers, then move to the next digit, and so on.
+
+### Algorithm:
+Here's a simplified version of the Radix Sort algorithm in pseudocode:
+
+```
+radixSort(arr):
+    maxDigit = getMaxDigitCount(arr)
+    
+    for i = 1 to maxDigit
+        bucketSort(arr, i)
+
+bucketSort(arr, digitPlace):
+    create 10 buckets (0-9)
+
+    for each number in arr
+        digit = getDigit(number, digitPlace)
+        place the number in the corresponding bucket
+
+    reconstruct the array from the buckets
+
+getDigit(num, place):
+    return (num / 10^(place-1)) % 10
+
+getMaxDigitCount(arr):
+    maxDigit = 0
+
+    for each number in arr
+        maxDigit = max(maxDigit, countDigits(number))
+
+    return maxDigit
+
+countDigits(num):
+    count = 0
+
+    while num > 0
+        num = num / 10
+        count = count + 1
+
+    return count
+```
+This algorithm efficiently handles the sorting of numbers by considering each digit at a time.
