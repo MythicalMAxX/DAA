@@ -621,6 +621,68 @@ Let's say we have a bunch of numbers: 4, 2, 1, 4, 3, and 2. We want to sort them
 
 And there you go! The numbers are now sorted.
 
+### Algorithm
+```
+CountingSort(arr):
+    // Step 1
+    max_element = FindMaxElement(arr)
+    
+    // Step 2
+    count = InitializeCountArray(max_element)
+    
+    // Step 3
+    CountOccurrences(arr, count)
+    
+    // Step 4
+    ModifyCountArray(count)
+    
+    // Step 5
+    output = InitializeOutputArray(arr)
+    
+    // Step 6
+    PlaceElements(arr, count, output)
+    
+    return output
+
+// Helper Functions:
+
+// Step 1: Find the maximum element in the array
+FindMaxElement(arr):
+    max_element = arr[0]
+    for element in arr:
+        if element > max_element:
+            max_element = element
+    return max_element
+
+// Step 2: Initialize a count array with zeros
+InitializeCountArray(max_element):
+    count = array of size (max_element + 1) initialized with zeros
+    return count
+
+// Step 3: Count the occurrences of each element in the array
+CountOccurrences(arr, count):
+    for element in arr:
+        count[element] += 1
+
+// Step 4: Modify the count array to store cumulative count
+ModifyCountArray(count):
+    for i from 1 to size(count) - 1:
+        count[i] += count[i - 1]
+
+// Step 5: Initialize the output array
+InitializeOutputArray(arr):
+    output = array of size length(arr)
+
+// Step 6: Place elements in their sorted position
+PlaceElements(arr, count, output):
+    i = length(arr) - 1
+    while i >= 0:
+        element = arr[i]
+        count[element] -= 1
+        output[count[element]] = element
+        i -= 1
+```
+
 **Real-Life Analogy:**
 Imagine you have a bag of candies with different colors—red, blue, and green. Counting Sort is like arranging all the red candies together, then the blue ones, and finally the green ones. It helps you quickly find and organize your favorite candies!
 
