@@ -12,14 +12,17 @@ Heap Sort          | O(n log n)           | O(1)             | No        | Yes  
 Radix Sort         | O(kn) (k is the      | O(k+n)           | Yes       | Yes      |
                    | number of digits)    |                  |           |          |
 Bucket Sort        | O(n^2) (worst case)  | O(n)             | Yes       | Yes      |
+Counting Sort      | O(n+k) (k is the     | O(k)             | Yes       | Yes      |
+                   | range of input)      |                  |           |          |
 ```
 ## Classification:
 ```
 Category            | Algorithms                   |
 ---------------------|------------------------------|
-Simple Sorting      | Insertion Sort, Selection Sort, Bubble Sort |
+Simple Sorting      | Insertion Sort, Selection Sort, Bubble Sort, Counting Sort |
 Efficient Sorting   | Merge Sort, Quick Sort, Heap Sort |
 Distribution Sorting | Radix Sort, Bucket Sort       |
+
 ```
 ## Insertion Sort
 ### Concept:
