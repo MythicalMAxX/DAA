@@ -484,3 +484,55 @@ countDigits(num):
     return count
 ```
 This algorithm efficiently handles the sorting of numbers by considering each digit at a time.
+
+
+## Bucket Sort
+### Concept:
+
+**Divide into Buckets:** Divide the input array into a number of equally sized buckets.
+**Sort each Bucket:** Sort each individual bucket. This can be done using another sorting algorithm or recursively applying Bucket Sort.
+**Concatenate Buckets:** Combine the sorted buckets to get the final sorted array.
+
+![How to Bucket Sort](https://i.makeagif.com/media/5-18-2016/a7ppGv.gif)
+
+### Visual Explanation:
+**Consider an array of numbers:** [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51]. We'll sort this array using Bucket Sort.
+
+### Divide into Buckets:
+
+```
+Bucket 0.3: [0.32, 0.33]
+Bucket 0.4: [0.42, 0.37, 0.47]
+Bucket 0.5: [0.52, 0.51]
+```
+### Sort each Bucket:
+
+Sort each individual bucket. In this case, the buckets are already sorted, but you might use another sorting algorithm for this step.
+
+### Concatenate Buckets:
+
+**Combine the sorted buckets:** [0.32, 0.33, 0.37, 0.42, 0.47, 0.51, 0.52]
+
+Now, the array is sorted.
+
+### Real-life analogy:
+Think of Bucket Sort like organizing a set of numbers by placing them into different containers (buckets), sorting each container separately, and then combining them to get a fully sorted list.
+
+### Algorithm:
+Here's a simplified version of the Bucket Sort algorithm in pseudocode:
+
+```
+bucketSort(arr):
+    n = length of arr
+    buckets = create empty array of n empty buckets
+
+    for i = 1 to n
+        index = n * arr[i]
+        append arr[i] to the bucket at index
+
+    for each bucket in buckets
+        sort the bucket (you can use another sorting algorithm or recursively apply bucketSort)
+
+    concatenate the sorted buckets to get the final sorted array
+```
+This algorithm assumes that the input is uniformly distributed over the range [0, 1). If the input range is different, you may need to adjust the indexing and bucket creation accordingly.
