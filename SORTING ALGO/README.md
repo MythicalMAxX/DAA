@@ -92,7 +92,7 @@ This algorithm iterates through the array, finding the smallest element in the u
 ## Bubble Sort
 ### Concept:
 Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
-
+![](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 ### Explanation:
 Imagine you have a list of numbers, and you want to sort them in ascending order using Bubble Sort. The algorithm compares pairs of adjacent elements and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted.
 
