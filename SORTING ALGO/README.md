@@ -1,3 +1,26 @@
+# Sorting Algorithm
+## Time Complexity:
+```
+Algorithm         | Time Complexity      | Space Complexity | Stability | In-Place |
+-------------------|----------------------|------------------|-----------|----------|
+Insertion Sort     | O(n^2)               | O(1)             | Yes       | Yes      |
+Selection Sort     | O(n^2)               | O(1)             | No        | Yes      |
+Bubble Sort        | O(n^2)               | O(1)             | Yes       | Yes      |
+Merge Sort         | O(n log n)           | O(n)             | Yes       | No       |
+Quick Sort         | O(n^2) (worst case)  | O(log n)         | No        | Yes      |
+Heap Sort          | O(n log n)           | O(1)             | No        | Yes      |
+Radix Sort         | O(kn) (k is the      | O(k+n)           | Yes       | Yes      |
+                   | number of digits)    |                  |           |          |
+Bucket Sort        | O(n^2) (worst case)  | O(n)             | Yes       | Yes      |
+```
+## Classification:
+```
+Category            | Algorithms                   |
+---------------------|------------------------------|
+Simple Sorting      | Insertion Sort, Selection Sort, Bubble Sort |
+Efficient Sorting   | Merge Sort, Quick Sort, Heap Sort |
+Distribution Sorting | Radix Sort, Bucket Sort       |
+```
 ## Insertion Sort
 ### Concept:
 Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It's much like sorting a hand of playing cards.
